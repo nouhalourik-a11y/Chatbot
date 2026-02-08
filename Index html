@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trinity-Large-Preview - Arcee AI</title>
+    <title>Fiche Technique : DeepSeek-TNG-R1T2-Chimera</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -11,7 +11,7 @@
             color: #333;
             max-width: 800px;
             margin: 40px auto;
-            padding: 0 20px;
+            padding: 20px;
             background-color: #f4f7f6;
         }
         .card {
@@ -19,88 +19,91 @@
             padding: 30px;
             border-radius: 12px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            border-top: 5px solid #2c3e50;
+            border-left: 6px solid #2c3e50;
         }
         h1 {
             color: #2c3e50;
             margin-top: 0;
-            font-size: 2em;
+            font-size: 1.8rem;
         }
         .badge {
             display: inline-block;
             background: #e67e22;
             color: white;
-            padding: 5px 12px;
+            padding: 4px 12px;
             border-radius: 20px;
-            font-size: 0.8em;
+            font-size: 0.85rem;
             font-weight: bold;
-            text-transform: uppercase;
             margin-bottom: 15px;
         }
-        .specs {
+        .specs-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin: 25px 0;
-            background: #f9f9f9;
-            padding: 20px;
-            border-radius: 8px;
+            gap: 20px;
+            margin-top: 25px;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
         }
         .spec-item {
-            font-size: 0.9em;
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
         }
-        .spec-item strong {
+        .spec-value {
             display: block;
-            color: #2c3e50;
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: #2980b9;
         }
-        p {
-            margin-bottom: 1.5em;
-            text-align: justify;
-        }
-        .footer {
-            font-size: 0.85em;
+        .spec-label {
+            font-size: 0.9rem;
             color: #7f8c8d;
+            text-transform: uppercase;
+        }
+        .description {
             margin-top: 20px;
-            border-top: 1px solid #eee;
-            padding-top: 15px;
+            font-style: italic;
+            color: #555;
         }
     </style>
 </head>
 <body>
 
 <div class="card">
-    <span class="badge">Frontier-Scale Model</span>
-    <h1>Trinity-Large-Preview</h1>
+    <div class="badge">TNG Tech - 2nd Generation</div>
+    <h1>DeepSeek-TNG-R1T2-Chimera</h1>
+    
+    <p class="description">
+        Un modèle Mixture-of-Experts (MoE) de 671 milliards de paramètres, fusionnant les checkpoints R1-0528, R1 et V3-0324 via une méthode "Assembly-of-Experts".
+    </p>
 
-    <div class="specs">
+    <div class="specs-grid">
         <div class="spec-item">
-            <strong>Architecture</strong>
-            400B Sparse MoE
+            <span class="spec-value">671B</span>
+            <span class="spec-label">Paramètres</span>
         </div>
         <div class="spec-item">
-            <strong>Active Parameters</strong>
-            13B par token (4-of-256)
+            <span class="spec-value">+20%</span>
+            <span class="spec-label">Vitesse vs R1</span>
         </div>
         <div class="spec-item">
-            <strong>Context Window</strong>
-            Up to 512k (128k Preview)
+            <span class="spec-value">60k - 130k</span>
+            <span class="spec-label">Fenêtre Contexte</span>
         </div>
         <div class="spec-item">
-            <strong>Licensing</strong>
-            Open Weights / Permissive
+            <span class="spec-value">2x Faster</span>
+            <span class="spec-label">vs R1-0528 (vLLM)</span>
         </div>
     </div>
 
-    <p>
-        <strong>Trinity-Large-Preview</strong> est un modèle de langage "open-weight" d'Arcee, conçu pour l'excellence dans l'écriture créative, le storytelling et les scénarios de role-play. Contrairement aux modèles de raisonnement classiques, il privilégie la fluidité narrative et l'assistance vocale en temps réel.
-    </p>
-
-    <p>
-        Au-delà de sa créativité, Trinity se distingue par ses performances <strong>agentiques</strong>. Il a été spécifiquement entraîné pour naviguer dans des environnements comme <em>OpenCode</em>, <em>Cline</em> ou <em>Kilo Code</em>, lui permettant de gérer des chaînes d'outils complexes et des instructions à fortes contraintes.
-    </p>
-
-    <div class="footer">
-        Propulsé par la philosophie "efficiency-first" d'Arcee — Déployé avec quantification 8-bit pour une utilisation en production.
+    <div style="margin-top: 25px;">
+        <h3>Points Clés :</h3>
+        <ul>
+            <li>Performance de raisonnement accrue (Tri-parent design).</li>
+            <li>Comportement des tokens &lt;think&gt; constant.</li>
+            <li>Optimisé pour l'analyse de long contexte et le dialogue ouvert.</li>
+        </ul>
     </div>
 </div>
 
