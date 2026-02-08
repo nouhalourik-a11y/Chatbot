@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trinity-Large Console</title>
+    <style>
+        :root {
+            --neon-blue: #00d4ff;
+            --dark-bg: #0a0b10;
+            --card-bg: #161b22;
+            --text-gray: #8b949e;
+        }
+
+        body {
+            background-color: var(--dark-bg);
+            color: #e6edf3;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            background: var(--card-bg);
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.1);
+        }
+
+        .header {
+            background: #21262d;
+            padding: 15px 25px;
+            border-bottom: 1px solid #30363d;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .status {
+            color: #238636;
+            font-size: 0.8em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .content {
+            padding: 30px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 1.8em;
+            color: var(--neon-blue);
+            text-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px;
+            background: #30363d;
+            margin: 30px 0;
+            border: 1px solid #30363d;
+        }
+
+        .grid-item {
+            background: var(--card-bg);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .label {
+            display: block;
+            color: var(--text-gray);
+            font-size: 0.75em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .value {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .agentic-box {
+            border-left: 4px solid var(--neon-blue);
+            background: rgba(0, 212, 255, 0.05);
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .tag {
+            display: inline-block;
+            border: 1px solid var(--neon-blue);
+            color: var(--neon-blue);
+            padding: 2px 8px;
+            font-size: 0.7em;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+
+        footer {
+            padding: 20px;
+            text-align: center;
+            font-size: 0.8em;
+            color: var(--text-gray);
+            border-top: 1px solid #30363d;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <span class="status">● System Active</span>
+        <span style="color: var(--text-gray)">v1.0-Preview</span>
+    </div>
+
+    <div class="content">
+        <h1>TRINITY-LARGE</h1>
+        <p style="color: var(--text-gray)">Sparse Mixture-of-Experts (MoE) Architecture by Arcee.ai</p>
+
+        <div class="grid">
+            <div class="grid-item">
+                <span class="label">Total Parameters</span>
+                <span class="value">400B</span>
+            </div>
+            <div class="grid-item">
+                <span class="label">Active Experts</span>
+                <span class="value">4 / 256</span>
+            </div>
+            <div class="grid-item">
+                <span class="label">Active Params</span>
+                <span class="value">13B</span>
+            </div>
+        </div>
+
+        <div class="agentic-box">
+            <h3 style="margin-top: 0;">Capabilities : Agentic Performance</h3>
+            <p>Optimisé pour naviguer dans des harnais comme <strong>OpenCode, Cline et Kilo Code</strong>. Gestion native des chaînes d'outils complexes et fenêtres de contexte étendues.</p>
+            <div>
+                <span class="tag">512K CONTEXT</span>
+                <span class="tag">8-BIT QUANT</span>
+                <span class="tag">OPEN WEIGHTS</span>
+                <span class="tag">REAL-TIME VOICE</span>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        Arcee-ai/trinity-large-preview:free | Frontier-scale Language Model
+    </footer>
+</div>
+
+</body>
+</html>
